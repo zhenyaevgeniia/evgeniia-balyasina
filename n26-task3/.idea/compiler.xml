@@ -9,12 +9,14 @@
         <module name="java_cucumber_api_draft" />
         <module name="java_cucumber_ui_draft" />
         <module name="juke" />
+        <module name="n26-task3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java_cucumber_api_draft" target="1.8" />
       <module name="java_cucumber_ui_draft" target="1.8" />
       <module name="juke" target="1.7" />
+      <module name="n26-task3" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
