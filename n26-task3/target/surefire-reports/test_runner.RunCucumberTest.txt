@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: test_runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.574 sec <<< FAILURE!
+POST services(Services scenarios)  Time elapsed: 1.639 sec  <<< ERROR!
+java.lang.IllegalStateException: Status code is not 200: 201
+
+{
+    "createdAt": "2018-03-03T23:25:12.383Z",
+    "name": "POST service",
+    "id": 126,
+    "updatedAt": "2018-03-03T23:25:12.383Z"
+}
+	at api.APICore.verifyLastStatusCode(APICore.java:265)
+	at stepdefs_api.ServicesDef.lastResponseShouldHaveStatus(ServicesDef.java:70)
+	at ✽.last response should have status '200'(src/test/resources/features/Services.feature:16)
+
+DELETE services(Services scenarios)  Time elapsed: 0.042 sec  <<< FAILURE!
+java.lang.AssertionError: Last Response is not empty
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at stepdefs_api.ServicesDef.lastResponseShouldBeEmpty(ServicesDef.java:65)
+	at ✽.last response should be empty(src/test/resources/features/Services.feature:82)
+
