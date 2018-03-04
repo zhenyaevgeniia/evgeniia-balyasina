@@ -1,6 +1,0 @@
-common/dtos/AlbumDTO.class
-utils/PrettyJsonUtil.class
-api/APICore.class
-utils/LocalPropertiesUtil.class
-api/RequestMethod.class
-api/helpers/ServicesAPIHelper.class

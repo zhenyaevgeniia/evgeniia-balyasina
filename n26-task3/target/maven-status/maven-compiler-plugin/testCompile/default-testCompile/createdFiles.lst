@@ -1,5 +1,0 @@
-test_runner/RunCucumberTest.class
-pojo/ServiceItem.class
-pojo/ServiceList.class
-stepdefs_api/AbstractDef.class
-stepdefs_api/ServicesDef.class
