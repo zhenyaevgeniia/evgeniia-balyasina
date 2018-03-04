@@ -104,31 +104,22 @@ Points 2 and 3 are covered in Services.feature.
 
 Initially it was a plan to cover 4 by creating feature "Stores" because of connection with "Services".
 Example of specific scenario could be following:
- > Scenario: DELETE services used in stores
 
- >  Given POST services is sent with body
-
- >  """
-
- >   "name": "POST service for store"
-
- >  """
-
- > And POST stores is sent with body
-
- > """
-
- >  "name": "POST store"
-
- >  ...
-
- >  "service": {LAST_CREATED_SERVICE}
-
- > """
-
- > When DELETE last created service is sent
-
- > Then .... [here either success either 404, depend on implementation]
+ ```
+ Scenario: DELETE services used in stores
+  Given POST services is sent with body
+  """
+    "name": "POST service for store"
+  """
+  And POST stores is sent with body
+  """
+    "name": "POST store"
+    ...
+    "service": {LAST_CREATED_SERVICE}
+    """
+  When DELETE last created service is sent
+  Then .... [here either success either 404, depend on implementation]
+  ```
 
 Unfortunately, documentation does't provide the way how Stores and Services could be connected.
 I've tried in Postman POST http://localhost:3030/stores with body
