@@ -1,7 +1,4 @@
-Content:
-
-[TASK1](TASK1)
-[TASK3](TASK3)
+Test plans are made for Task1 and Task3.
 
 # TASK1
 
@@ -63,7 +60,7 @@ List of feature according the priority.
  - after activation, all data moves from device to dropbox automatically and completely;
  - check the case: dropbox was set, then dropbox account was removed or not available (no place, disallow  - access for Monefy app if possible or similar).
 4. Accounts:
- - see [Accounts in basic version](Accounts);
+ - see Accounts in basic version;
  - after any update in account the data is updated in each connected device.
 5. Categories:
  - list is available for each operation: add expense/income, edit record, open list of categories in menu;
@@ -77,21 +74,21 @@ List of feature according the priority.
  - updates the data on main screen correctly;
  - setting is saved after closing app.
 7. Currency:
- - see [Currency in basic version](Currency);
+ - see Currency in basic version;
  - after any update in currently the data is updated in each connected device.
 8. Budget mode:
- - see [Budget mode in basic version](Budget mode);
+ - see Budget mode in basic version;
  - after any update in currently the data is updated in each connected device.
 9. Carry over:
- - see [Carry over in basic version](Cary over);
+ - see Carry over in basic version);
  - after any update in currently the data is updated in each connected device.
 10. Language:    
-- see [Language in basic version](Language);
+- see Language in basic version;
 - after any update in currently the data is updated in each connected device.
 7. “Money pro” features:
- - menu item not visible OR shows that already activated. 
+ - menu item not visible OR shows that already activated.
 8. Create and restore data:
- - see [Create and restore data in basic version](Create and restore data).
+ - see Create and restore data in basic version.
 
 
 # TASK3
@@ -111,32 +108,19 @@ Response body and values for healthcheck should be discussed with developers or 
 
 Initially it was a plan to cover 4 by creating feature "Stores" because of connection with "Services".
 Example of specific scenario could be following:
-
- Scenario: DELETE services used in stores
-
- Given POST services is sent with body
-
- """
-
-    "name": "POST service for store"
-
- """
-
- And POST stores is sent with body
-
- """
-
-    "name": "POST store"
-
-    ...
-
-    "service": {LAST_CREATED_SERVICE}
-
- """
-
- When DELETE last created service is sent
-
- Then .... [here either success either 404, depend on implementation]
+ > Scenario: DELETE services used in stores
+ >  Given POST services is sent with body
+ >  """
+ >   "name": "POST service for store"
+ >  """
+ > And POST stores is sent with body
+ > """
+ >  "name": "POST store"
+ >  ...
+ >  "service": {LAST_CREATED_SERVICE}
+ > """
+ > When DELETE last created service is sent
+ > Then .... [here either success either 404, depend on implementation]
 
 Unfortunately, documentation does't provide the way how Stores and Services could be connected.
 I've tried in Postman POST http://localhost:3030/stores with body
