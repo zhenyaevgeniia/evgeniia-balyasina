@@ -5,4 +5,3 @@ HOW TO RUN
 3. Go to local repository in console.
 4. Sent the command: mvn clean test
 5. Report could be found in .../n26-task3/target/cucumber/index.html.
-

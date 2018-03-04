@@ -4,7 +4,7 @@ Test plans are done for Task1 and Task3.
 
 Application: version 1.8.6. Android 7.1.1. Device: Moto G5s.
 
-List of feature according the priority.
+List of features according to priority.
 
 #### Assumption 1: most of the users use basic version.
 
@@ -36,12 +36,12 @@ List of feature according the priority.
  - updates the data on main screen correctly;
  - setting is saved after closing app.
 10. Currency:
- - changing the currency effects only the way of showing the currency, not the values of numbers.
+ - changing the currency affects only the way of showing the currency, not the values of numbers.
 11. Budget mode:
- - after setting the mode the balance for chosen period is updated according formula: [budget_mode_number]/[chosen_period]
+ - after setting the mode the balance for chosen period is updated according to formula: [budget_mode_number]/[chosen_period]
 12. Carry over:
  - calculation is a sum from the first day of expenses;
- - number on main screen updates only on next day after added expenses.
+ - number on main screen updates only on the next day after added expenses.
 13. Language:    
  - all data is updated after chosen language except of notes made by user;
  - doesn't affect the balance.
@@ -54,7 +54,7 @@ List of feature according the priority.
  - when app is launched from background mode;
  - when app was closed and opened again;
  - when device was restarted;
- - when new device is connected for same account.  
+ - when new device is connected for the same account.  
 3. Dropbox synchronization:
  - if synchronization is available but not set, data is stored on device as with basic functionality;
  - after activation, all data moves from device to dropbox automatically and completely;
@@ -64,7 +64,7 @@ List of feature according the priority.
  - after any update in account the data is updated in each connected device.
 5. Categories:
  - list is available for each operation: add expense/income, edit record, open list of categories in menu;
- - after add/update new category or delete category without linked data it updates in each list for each synchronized device;
+ - after adding/updating new category or deleting category without linked data it updates in each list for each synchronized device;
  - when user tries to delete a category with data then it moves to other with specific error message OR proper error message appears.
 5. Actions with records:
  - edited data stored on dropbox;
@@ -75,16 +75,16 @@ List of feature according the priority.
  - setting is saved after closing app.
 7. Currency:
  - see Currency in basic version;
- - after any update in currently the data is updated in each connected device.
+ - after any update in currency the data is updated in each connected device.
 8. Budget mode:
  - see Budget mode in basic version;
  - after any update in currently the data is updated in each connected device.
 9. Carry over:
- - see Carry over in basic version);
- - after any update in currently the data is updated in each connected device.
+ - see Carry over in basic version;
+ - after any update in currency the data is updated in each connected device.
 10. Language:    
 - see Language in basic version;
-- after any update in currently the data is updated in each connected device.
+- after any update in currency the data is updated in each connected device.
 7. “Money pro” features:
  - menu item not visible OR shows that already activated.
 8. Create and restore data:
@@ -93,16 +93,16 @@ List of feature according the priority.
 
 # TASK3
 
-My suggestion to create scenarios for Best Buy API Playground for each listed endpoint with following priority:
-1. Healthy check endpoints to check that service works in general.
-2. CRUD with valid data for each of endpoint to check that endpoints are working.
+My suggestion is to create scenarios for Best Buy API Playground for each listed endpoint with following priority:
+1. Healthy-check endpoint to check that service works in general.
+2. CRUD with valid data for each of endpoints to check that endpoints are working.
 3. CRUD with invalid data for each endpoint to check error messages are taken correctly (without 500).
 4. Specific situations, such are dependencies.
 
 Point 1 is covered in Utilities.feature.
 Points 2 and 3 are covered in Services.feature.
 
-Initially it was a plan to cover 4 by creating feature "Stores" because of connection with "Services".
+Initially plan was to cover 4 by creating feature "Stores" because of connection with "Services".
 Example of specific scenario could be following:
 
  ```
@@ -118,7 +118,7 @@ Example of specific scenario could be following:
     "service": {LAST_CREATED_SERVICE}
     """
   When DELETE last created service is sent
-  Then .... [here either success either 404, depend on implementation]
+  Then .... [here either success either 404, depends on implementation]
   ```
 
 Unfortunately, documentation does't provide the way how Stores and Services could be connected.
