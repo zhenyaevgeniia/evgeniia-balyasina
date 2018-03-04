@@ -113,6 +113,7 @@ public abstract class APICore {
     public void sendGetAPIRequest(String url) {
         updateLastRequest(url, new HashMap<>(), RequestMethod.GET);
         String request = prepareRequestUrl(url);
+        System.out.println("test request " + url);
         sendGetRequest(request);
     }
 

@@ -1,5 +1,5 @@
 package api;
 
 public enum RequestMethod {
-    POST, GET, PUT, PATCH, DELETE
+    POST, GET, PATCH, DELETE
 }

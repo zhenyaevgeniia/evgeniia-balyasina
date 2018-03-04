@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1515021658,
+              "duration": 2057379324,
               "status": "passed"
             },
             "line": 10,
@@ -28,8 +28,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.IllegalStateException: Status code is not 200: 201\n\n{\n    \"createdAt\": \"2018-03-03T23:25:12.383Z\",\n    \"name\": \"POST service\",\n    \"id\": 126,\n    \"updatedAt\": \"2018-03-03T23:25:12.383Z\"\n}\n\tat api.APICore.verifyLastStatusCode(APICore.java:265)\n\tat stepdefs_api.ServicesDef.lastResponseShouldHaveStatus(ServicesDef.java:70)\n\tat ✽.last response should have status \u0027200\u0027(src/test/resources/features/Services.feature:16)\n",
-              "duration": 111564244,
+              "error_message": "java.lang.IllegalStateException: Status code is not 200: 201\n\n{\n    \"createdAt\": \"2018-03-04T10:58:28.388Z\",\n    \"name\": \"POST service\",\n    \"id\": 166,\n    \"updatedAt\": \"2018-03-04T10:58:28.388Z\"\n}\n\tat api.APICore.verifyLastStatusCode(APICore.java:266)\n\tat stepdefs_api.ServicesDef.lastResponseShouldHaveStatus(ServicesDef.java:71)\n\tat ✽.last response should have status \u0027200\u0027(src/test/resources/features/Services.feature:16)\n",
+              "duration": 120179351,
               "status": "failed"
             },
             "line": 16,
@@ -67,7 +67,7 @@
         ]
       },
       {
-        "line": 23,
+        "line": 22,
         "name": "POST services. GET services/{id}",
         "description": "",
         "id": "services-scenarios;post-services.-get-services/{id}",
@@ -76,22 +76,28 @@
         "steps": [
           {
             "result": {
-              "duration": 139559669,
+              "duration": 177677501,
               "status": "passed"
             },
-            "line": 24,
-            "name": "GET services is sent",
+            "line": 23,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 175385,
+              "duration": 201851,
               "status": "passed"
             },
-            "line": 25,
+            "line": 24,
             "name": "total number of services is stored",
             "match": {
               "location": "ServicesDef.storeGetServicesTotalNumber()"
@@ -100,26 +106,26 @@
           },
           {
             "result": {
-              "duration": 31284641,
+              "duration": 55005998,
               "status": "passed"
             },
-            "line": 26,
+            "line": 25,
             "name": "POST services is sent with body",
             "match": {
               "location": "ServicesDef.postServiceWithAttributes(String)"
             },
             "keyword": "When ",
             "doc_string": {
-              "line": 27,
+              "line": 26,
               "value": "  {\n    \"name\": \"POST service for GET id\"\n  }"
             }
           },
           {
             "result": {
-              "duration": 365436,
+              "duration": 319041,
               "status": "passed"
             },
-            "line": 32,
+            "line": 31,
             "name": "last response should have status \u0027201\u0027",
             "match": {
               "arguments": [
@@ -134,10 +140,10 @@
           },
           {
             "result": {
-              "duration": 11429038,
+              "duration": 14896408,
               "status": "passed"
             },
-            "line": 33,
+            "line": 32,
             "name": "last response should contain following data",
             "match": {
               "location": "ServicesDef.lastResponseShouldContain(DataTable)"
@@ -154,10 +160,10 @@
           },
           {
             "result": {
-              "duration": 20009769,
+              "duration": 25960472,
               "status": "passed"
             },
-            "line": 35,
+            "line": 34,
             "name": "GET services with id of last created service",
             "match": {
               "location": "ServicesDef.getServicesByIdOfLastCreated()"
@@ -166,10 +172,10 @@
           },
           {
             "result": {
-              "duration": 332764,
+              "duration": 521048,
               "status": "passed"
             },
-            "line": 36,
+            "line": 35,
             "name": "last response should have status \u0027200\u0027",
             "match": {
               "arguments": [
@@ -184,10 +190,10 @@
           },
           {
             "result": {
-              "duration": 346385,
+              "duration": 256609,
               "status": "passed"
             },
-            "line": 37,
+            "line": 36,
             "name": "last response should contain last created service",
             "match": {
               "location": "ServicesDef.lastResponseShouldContainLastCreatedService()"
@@ -196,22 +202,28 @@
           },
           {
             "result": {
-              "duration": 23609985,
+              "duration": 22855626,
               "status": "passed"
             },
-            "line": 38,
-            "name": "GET services is sent",
+            "line": 37,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 591442,
+              "duration": 683092,
               "status": "passed"
             },
-            "line": 39,
+            "line": 38,
             "name": "total number should be increased to 1",
             "match": {
               "location": "ServicesDef.verifyServicesTotalNumberIncreased()"
@@ -229,7 +241,7 @@
         ]
       },
       {
-        "line": 42,
+        "line": 41,
         "name": "GET services",
         "description": "",
         "id": "services-scenarios;get-services",
@@ -238,22 +250,28 @@
         "steps": [
           {
             "result": {
-              "duration": 17372433,
+              "duration": 25292243,
               "status": "passed"
             },
-            "line": 43,
-            "name": "GET services is sent",
+            "line": 42,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 350991,
+              "duration": 433640,
               "status": "passed"
             },
-            "line": 44,
+            "line": 43,
             "name": "last response should have status \u0027200\u0027",
             "match": {
               "arguments": [
@@ -268,10 +286,10 @@
           },
           {
             "result": {
-              "duration": 368804,
+              "duration": 417605,
               "status": "passed"
             },
-            "line": 45,
+            "line": 44,
             "name": "last response should not be empty",
             "match": {
               "location": "ServicesDef.lastResponseShouldNotBeEmpty()"
@@ -289,7 +307,7 @@
         ]
       },
       {
-        "line": 48,
+        "line": 47,
         "name": "PATCH services.",
         "description": "",
         "id": "services-scenarios;patch-services.",
@@ -298,38 +316,44 @@
         "steps": [
           {
             "result": {
-              "duration": 32185823,
+              "duration": 39231063,
               "status": "passed"
             },
-            "line": 49,
+            "line": 48,
             "name": "POST services is sent with body",
             "match": {
               "location": "ServicesDef.postServiceWithAttributes(String)"
             },
             "keyword": "Given ",
             "doc_string": {
-              "line": 50,
+              "line": 49,
               "value": "  {\n    \"name\": \"POST service for PATCH\"\n  }"
             }
           },
           {
             "result": {
-              "duration": 17410070,
+              "duration": 33103737,
               "status": "passed"
             },
-            "line": 55,
-            "name": "GET services is sent",
+            "line": 54,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 166651,
+              "duration": 437740,
               "status": "passed"
             },
-            "line": 56,
+            "line": 55,
             "name": "total number of services is stored",
             "match": {
               "location": "ServicesDef.storeGetServicesTotalNumber()"
@@ -338,26 +362,26 @@
           },
           {
             "result": {
-              "duration": 17212980,
+              "duration": 33475119,
               "status": "passed"
             },
-            "line": 57,
+            "line": 56,
             "name": "PATCH last created service is sent with body",
             "match": {
               "location": "ServicesDef.patchLastCreatedServiceWithAttributes(String)"
             },
             "keyword": "When ",
             "doc_string": {
-              "line": 58,
+              "line": 57,
               "value": "  {\n    \"name\": \"POST service for PATCH updated\"\n  }"
             }
           },
           {
             "result": {
-              "duration": 341666,
+              "duration": 416843,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "last response should have status \u0027200\u0027",
             "match": {
               "arguments": [
@@ -372,10 +396,10 @@
           },
           {
             "result": {
-              "duration": 534374,
+              "duration": 932497,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "last response should contain following data",
             "match": {
               "location": "ServicesDef.lastResponseShouldContain(DataTable)"
@@ -392,10 +416,10 @@
           },
           {
             "result": {
-              "duration": 11786963,
+              "duration": 20468801,
               "status": "passed"
             },
-            "line": 66,
+            "line": 65,
             "name": "GET services with id of last created service",
             "match": {
               "location": "ServicesDef.getServicesByIdOfLastCreated()"
@@ -404,10 +428,10 @@
           },
           {
             "result": {
-              "duration": 578658,
+              "duration": 662074,
               "status": "passed"
             },
-            "line": 67,
+            "line": 66,
             "name": "last response should contain following data",
             "match": {
               "location": "ServicesDef.lastResponseShouldContain(DataTable)"
@@ -424,22 +448,28 @@
           },
           {
             "result": {
-              "duration": 12569721,
+              "duration": 20599867,
               "status": "passed"
             },
-            "line": 69,
-            "name": "GET services is sent",
+            "line": 68,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 169290,
+              "duration": 259850,
               "status": "passed"
             },
-            "line": 70,
+            "line": 69,
             "name": "total number should not be changed",
             "match": {
               "location": "ServicesDef.verifyServicesTotalNumberNotChanged()"
@@ -457,7 +487,7 @@
         ]
       },
       {
-        "line": 73,
+        "line": 72,
         "name": "DELETE services",
         "description": "",
         "id": "services-scenarios;delete-services",
@@ -466,26 +496,26 @@
         "steps": [
           {
             "result": {
-              "duration": 18787423,
+              "duration": 27825999,
               "status": "passed"
             },
-            "line": 74,
+            "line": 73,
             "name": "POST services is sent with body",
             "match": {
               "location": "ServicesDef.postServiceWithAttributes(String)"
             },
             "keyword": "Given ",
             "doc_string": {
-              "line": 75,
+              "line": 74,
               "value": "  {\n    \"name\": \"POST service for DELETE\"\n  }"
             }
           },
           {
             "result": {
-              "duration": 17961108,
+              "duration": 25440060,
               "status": "passed"
             },
-            "line": 80,
+            "line": 79,
             "name": "DELETE last created service is sent",
             "match": {
               "location": "ServicesDef.deleteLastCreatedService()"
@@ -494,10 +524,10 @@
           },
           {
             "result": {
-              "duration": 197003,
+              "duration": 311876,
               "status": "passed"
             },
-            "line": 81,
+            "line": 80,
             "name": "last response should have status \u0027200\u0027",
             "match": {
               "arguments": [
@@ -512,11 +542,11 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Last Response is not empty\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat stepdefs_api.ServicesDef.lastResponseShouldBeEmpty(ServicesDef.java:65)\n\tat ✽.last response should be empty(src/test/resources/features/Services.feature:82)\n",
-              "duration": 927534,
+              "error_message": "java.lang.AssertionError: Last Response is not empty\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat stepdefs_api.ServicesDef.lastResponseShouldBeEmpty(ServicesDef.java:66)\n\tat ✽.last response should be empty(src/test/resources/features/Services.feature:81)\n",
+              "duration": 1200749,
               "status": "failed"
             },
-            "line": 82,
+            "line": 81,
             "name": "last response should be empty",
             "match": {
               "location": "ServicesDef.lastResponseShouldBeEmpty()"
@@ -534,7 +564,7 @@
         ]
       },
       {
-        "line": 86,
+        "line": 84,
         "name": "GET deleted service by ID",
         "description": "",
         "id": "services-scenarios;get-deleted-service-by-id",
@@ -543,38 +573,44 @@
         "steps": [
           {
             "result": {
-              "duration": 15986735,
+              "duration": 37702318,
               "status": "passed"
             },
-            "line": 87,
+            "line": 85,
             "name": "POST services is sent with body",
             "match": {
               "location": "ServicesDef.postServiceWithAttributes(String)"
             },
             "keyword": "Given ",
             "doc_string": {
-              "line": 88,
+              "line": 86,
               "value": "  {\n    \"name\": \"POST service for DELETE2\"\n  }"
             }
           },
           {
             "result": {
-              "duration": 12411106,
+              "duration": 19381579,
               "status": "passed"
             },
-            "line": 93,
-            "name": "GET services is sent",
+            "line": 91,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 266549,
+              "duration": 218337,
               "status": "passed"
             },
-            "line": 94,
+            "line": 92,
             "name": "total number of services is stored",
             "match": {
               "location": "ServicesDef.storeGetServicesTotalNumber()"
@@ -583,10 +619,10 @@
           },
           {
             "result": {
-              "duration": 26561433,
+              "duration": 65317803,
               "status": "passed"
             },
-            "line": 95,
+            "line": 93,
             "name": "DELETE last created service is sent",
             "match": {
               "location": "ServicesDef.deleteLastCreatedService()"
@@ -595,10 +631,10 @@
           },
           {
             "result": {
-              "duration": 1340573,
+              "duration": 844771,
               "status": "passed"
             },
-            "line": 96,
+            "line": 94,
             "name": "last response should have status \u0027200\u0027",
             "match": {
               "arguments": [
@@ -613,10 +649,10 @@
           },
           {
             "result": {
-              "duration": 14814096,
+              "duration": 30696160,
               "status": "passed"
             },
-            "line": 97,
+            "line": 95,
             "name": "GET services with id of last created service",
             "match": {
               "location": "ServicesDef.getServicesByIdOfLastCreated()"
@@ -625,10 +661,10 @@
           },
           {
             "result": {
-              "duration": 849102,
+              "duration": 345529,
               "status": "passed"
             },
-            "line": 98,
+            "line": 96,
             "name": "last response should have status \u0027404\u0027",
             "match": {
               "arguments": [
@@ -643,22 +679,28 @@
           },
           {
             "result": {
-              "duration": 10256115,
+              "duration": 31712935,
               "status": "passed"
             },
-            "line": 99,
-            "name": "GET services is sent",
+            "line": 97,
+            "name": "GET \u0027services\u0027 is sent",
             "match": {
-              "location": "ServicesDef.getServices()"
+              "arguments": [
+                {
+                  "val": "services",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 129882,
+              "duration": 264720,
               "status": "passed"
             },
-            "line": 100,
+            "line": 98,
             "name": "total number should be decreased to 1",
             "match": {
               "location": "ServicesDef.verifyServicesTotalNumberDecreased()"
@@ -695,6 +737,170 @@
         "type": "Tag",
         "location": {
           "line": 5,
+          "column": 6
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "GET version",
+        "description": "",
+        "id": "utilities-scenarios;get-version",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17348454,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "GET \u0027version\u0027 is sent",
+            "match": {
+              "arguments": [
+                {
+                  "val": "version",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 598158,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "last response should have status \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "ServicesDef.lastResponseShouldHaveStatus(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20474257,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "last response should equal",
+            "match": {
+              "location": "ServicesDef.lastResponseShouldEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "line": 10,
+              "value": "{\n\"version\": \"1.1.0\"\n}"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@API"
+          },
+          {
+            "name": "@utilities"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "GET healthcheck",
+        "description": "",
+        "id": "utilities-scenarios;get-healthcheck",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 144178767,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "GET \u0027healthcheck\u0027 is sent",
+            "match": {
+              "arguments": [
+                {
+                  "val": "healthcheck",
+                  "offset": 5
+                }
+              ],
+              "location": "ServicesDef.getServices(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 345819,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "last response should have status \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "ServicesDef.lastResponseShouldHaveStatus(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 321520,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "last response should not be empty",
+            "match": {
+              "location": "ServicesDef.lastResponseShouldNotBeEmpty()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@API"
+          },
+          {
+            "name": "@utilities"
+          }
+        ]
+      }
+    ],
+    "name": "Utilities scenarios",
+    "description": "",
+    "id": "utilities-scenarios",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Utilites.feature",
+    "tags": [
+      {
+        "name": "@API",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@utilities",
+        "type": "Tag",
+        "location": {
+          "line": 1,
           "column": 6
         }
       }

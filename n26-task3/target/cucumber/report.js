@@ -46,7 +46,7 @@ formatter.match({
   "location": "ServicesDef.lastResponseShouldHaveStatus(int)"
 });
 formatter.result({
-  "error_message": "java.lang.IllegalStateException: Status code is not 200: 201\n\n{\n    \"createdAt\": \"2018-03-03T23:25:12.383Z\",\n    \"name\": \"POST service\",\n    \"id\": 126,\n    \"updatedAt\": \"2018-03-03T23:25:12.383Z\"\n}\n\tat api.APICore.verifyLastStatusCode(APICore.java:265)\n\tat stepdefs_api.ServicesDef.lastResponseShouldHaveStatus(ServicesDef.java:70)\n\tat ✽.last response should have status \u0027200\u0027(src/test/resources/features/Services.feature:16)\n",
+  "error_message": "java.lang.IllegalStateException: Status code is not 200: 201\n\n{\n    \"createdAt\": \"2018-03-04T10:58:28.388Z\",\n    \"name\": \"POST service\",\n    \"id\": 166,\n    \"updatedAt\": \"2018-03-04T10:58:28.388Z\"\n}\n\tat api.APICore.verifyLastStatusCode(APICore.java:266)\n\tat stepdefs_api.ServicesDef.lastResponseShouldHaveStatus(ServicesDef.java:71)\n\tat ✽.last response should have status \u0027200\u0027(src/test/resources/features/Services.feature:16)\n",
   "status": "failed"
 });
 formatter.step({
@@ -73,11 +73,11 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -164,11 +164,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -197,11 +197,11 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -253,11 +253,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -342,11 +342,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -415,7 +415,7 @@ formatter.match({
   "location": "ServicesDef.lastResponseShouldBeEmpty()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Last Response is not empty\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat stepdefs_api.ServicesDef.lastResponseShouldBeEmpty(ServicesDef.java:65)\n\tat ✽.last response should be empty(src/test/resources/features/Services.feature:82)\n",
+  "error_message": "java.lang.AssertionError: Last Response is not empty\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat stepdefs_api.ServicesDef.lastResponseShouldBeEmpty(ServicesDef.java:66)\n\tat ✽.last response should be empty(src/test/resources/features/Services.feature:81)\n",
   "status": "failed"
 });
 formatter.scenario({
@@ -445,11 +445,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -505,11 +505,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "GET services is sent",
+  "name": "GET \u0027services\u0027 is sent",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ServicesDef.getServices()"
+  "location": "ServicesDef.getServices(String)"
 });
 formatter.result({
   "status": "passed"
@@ -520,6 +520,109 @@ formatter.step({
 });
 formatter.match({
   "location": "ServicesDef.verifyServicesTotalNumberDecreased()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.uri("src/test/resources/features/Utilites.feature");
+formatter.feature({
+  "name": "Utilities scenarios",
+  "description": "",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@API"
+    },
+    {
+      "name": "@utilities"
+    }
+  ]
+});
+formatter.scenario({
+  "name": "GET version",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@API"
+    },
+    {
+      "name": "@utilities"
+    }
+  ]
+});
+formatter.step({
+  "name": "GET \u0027version\u0027 is sent",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ServicesDef.getServices(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "last response should have status \u0027200\u0027",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ServicesDef.lastResponseShouldHaveStatus(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "last response should equal",
+  "keyword": "And ",
+  "doc_string": {
+    "value": "{\n\"version\": \"1.1.0\"\n}"
+  }
+});
+formatter.match({
+  "location": "ServicesDef.lastResponseShouldEqual(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "GET healthcheck",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@API"
+    },
+    {
+      "name": "@utilities"
+    }
+  ]
+});
+formatter.step({
+  "name": "GET \u0027healthcheck\u0027 is sent",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ServicesDef.getServices(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "last response should have status \u0027200\u0027",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ServicesDef.lastResponseShouldHaveStatus(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "last response should not be empty",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ServicesDef.lastResponseShouldNotBeEmpty()"
 });
 formatter.result({
   "status": "passed"

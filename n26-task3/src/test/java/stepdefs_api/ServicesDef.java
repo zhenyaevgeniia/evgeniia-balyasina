@@ -1,6 +1,6 @@
 package stepdefs_api;
 
-import api.jsontest.ServicesAPIHelper;
+import api.helpers.ServicesAPIHelper;
 import cucumber.api.DataTable;
 import cucumber.api.Transpose;
 import cucumber.api.java.en.And;
@@ -9,6 +9,7 @@ import cucumber.api.java.en.When;
 import org.apache.commons.lang3.StringUtils;
 import pojo.ServiceItem;
 import pojo.ServiceList;
+import utils.PrettyJsonUtil;
 
 import static org.junit.Assert.*;
 
@@ -24,8 +25,8 @@ public class ServicesDef extends AbstractDef {
 
     private String partUrl = "services";
 
-    @When("^GET services is sent$")
-    public void getServices() {
+    @When("^GET '(.*)' is sent$")
+    public void getServices(String partUrl) {
         servicesAPIHelper.sendGetAPIRequest(partUrl);
         lastGotServiceList = getGson().fromJson(servicesAPIHelper.getLastResponseBody(), ServiceList.class);
     }
@@ -68,6 +69,14 @@ public class ServicesDef extends AbstractDef {
     @Then("^last response should have status '(.*)'$")
     public void lastResponseShouldHaveStatus(int expectedStatus) {
         servicesAPIHelper.verifyLastStatusCode(expectedStatus);
+    }
+
+    @Then("^last response should equal$")
+    public void lastResponseShouldEqual(String expectedBody) {
+        expectedBody = PrettyJsonUtil.getPrettyFormattedJson(expectedBody);
+        String actualBody = servicesAPIHelper.getPrettyFormattedLastResponseBody();
+        assertEquals("Actual response body does not equal expected. Actual body:\n" + actualBody,
+                     expectedBody, actualBody);
     }
 
     @And("^last response should contain following data")
