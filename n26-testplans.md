@@ -1,4 +1,4 @@
-Test plans are done for Task1 and Task3.
+Test plans are done for each task.
 
 # TASK1
 
@@ -138,3 +138,25 @@ Entity was created as a result but with "services": {}.
 Possible solutions:
 - find the way how services could be linked with stores and update documentation;
 - if there is bug here that services should come in post, create a ticket to fix the bug.
+
+
+# TASK2
+
+#### TestPlan
+1. Check that data is saved correctly. The most important data: adding new expense.
+2. Check that after close/open the app the correct data is shown. The most important data: adding new expense.
+3. As I assume the app would be used mostly to collect expenses and observe data in chosen period, so the moving between screens should be easy understandable. Therefore test of the logic for moving between the most critical screens (from add new data to diagrams and back) should go to high priority. High attention to back button in android. And high attention to right menu (hamburger icon) since it has complicated logic of shown 3 different screens: menu, filters for list view, password. FLOATING BUG: Screen to add expense. Click on menu item. Result: password screen opens but with invisible (!) keyboard and user not able to navigate to any other screen before cleaning the app data.
+4. Password functionality. The logic of password is a bit unclear for me for now, seems it should be used for navigate from screen "Add expense" to "Expenses summary". Therefore, the most important here to check:
+ - each screen which needs a password works with initially set password;
+ - each screen which needs a password works after the password was changed.
+5. Check data stored before user registration is not removed after registration and login.
+6. Check data after user logout (if should be 0) and login (if shown correctly).
+7. Check each of view from the menu and expense report show the relevant data.
+8. Check filters for list view. The data should be updated in accordance to apply/clear filter.
+9. Check synchronization to server (the full logic here is unclear) is not available without authorization.  
+10. Check max expense limit monthly applies only when turned on.
+11. Check after set "Max expense monthly" [assumption, logic is unclear] the value is shown in "Expenses summary" screens and there is a notification to user when he add an expense after limit is reached.
+
+#### Comments to automation implementation
+Due to the limited time and lack of experience with Appium, I've only manage to implement the simplest scenario.
+In my point of view each of test case written above should be implemented. Implementation of point 3 could be tricky, but covering all possible scenario of user patch and validation of resulting screens will keep the logic stable (if tests are run every build) and will save a lot of time for testing release candidate.

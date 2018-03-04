@@ -22,7 +22,7 @@ public class CommonDef extends AbstractDef {
     private ServiceItem lastGotServiceItem;
     private ServiceList lastGotServiceList;
     private int initialTotalNumber;
-    
+
     /*COMMON STEP DEFINITIONS*/
 
     @When("^GET '(.*)' is sent$")
