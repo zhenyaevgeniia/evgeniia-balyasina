@@ -1,4 +1,4 @@
-Test plans are made for Task1 and Task3.
+Test plans are done for Task1 and Task3.
 
 # TASK1
 
@@ -99,27 +99,35 @@ My suggestion to create scenarios for Best Buy API Playground for each listed en
 3. CRUD with invalid data for each endpoint to check error messages are taken correctly (without 500).
 4. Specific situations, such are dependencies.
 
-2 and 3 are covered in Services.feature.
-
-1 could be covered same way as GET /services.
-For version I would hardcode the version in test to let the test fail after first version update. To be sure that version number is updated correctly.
-For healthcheck success status is the most critical part.
-Response body and values for healthcheck should be discussed with developers or product managers, ex. is there any limit for uptime.
+Point 1 is covered in Utilities.feature.
+Points 2 and 3 are covered in Services.feature.
 
 Initially it was a plan to cover 4 by creating feature "Stores" because of connection with "Services".
 Example of specific scenario could be following:
  > Scenario: DELETE services used in stores
+
  >  Given POST services is sent with body
+
  >  """
+
  >   "name": "POST service for store"
+
  >  """
+
  > And POST stores is sent with body
+
  > """
+
  >  "name": "POST store"
+
  >  ...
+
  >  "service": {LAST_CREATED_SERVICE}
+
  > """
+
  > When DELETE last created service is sent
+
  > Then .... [here either success either 404, depend on implementation]
 
 Unfortunately, documentation does't provide the way how Stores and Services could be connected.
